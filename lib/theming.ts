@@ -51,8 +51,8 @@ const createTheming = function createTheming<Theme>(
           )
         } else {
           theme =
-            outerTheme && outerTheme!.value
-              ? { ...(outerTheme!.value as any), ...(pt as any) }
+            outerTheme && outerTheme!['value']
+              ? { ...(outerTheme!['value'] as any), ...(pt as any) }
               : pt
           warning(
             isObject(theme),
